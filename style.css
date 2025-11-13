@@ -1,0 +1,152 @@
+:root { 
+    --link-color: #3498db;
+    --secondary-color: #2ecc71;
+    --font-color: #252525;
+    --background-color: #f5f5f5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+    background-color: var(--background-color);
+}
+
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* Navbar Styles */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding: 0 50px;
+    height: 80px;
+}
+
+nav .left a{
+    color: var(--font-color);
+    font-size: 22px;
+    font-weight: 600 ;
+}
+
+nav .right a{
+    color: var(--font-color);
+    margin: 0 10px;
+}
+
+nav .right a:last-child {
+    color:var(--background-color) ;
+    background-color: var(--font-color);
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+nav .right a span {
+    margin-left: 5px;
+}
+
+/*Section 1 : Hero Section Styles */
+.hero-section{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    gap: 40px;
+    margin-bottom: 100px;
+    transition: .3s;
+    
+}
+
+.hero-section .text {
+    flex: 5;
+}
+
+.hero-section .headshot {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.hero-section .headshot img{
+    width: 400px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+
+
+.hero-section .text .links a{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin: 5px
+}
+
+
+
+.hero-section .text .links a:hover {
+    color: var(--font-color);
+    border: 2px solid var(--font-color);
+}
+
+/* Section 3 : Skills */
+.skills-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+
+}
+
+.skills-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+
+@media (max-width: 850px) {
+    .hero-section .text h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 740px) {
+    .hero-section {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Navigation styles for mobile */
+
+    nav{ 
+        padding: 0 20px;
+    }
+
+    nav .right{
+        font-size: 22px;
+    }
+
+    nav .right a:last-child {
+        color: var(--font-color);
+        background-color: transparent;
+        padding: 0;
+    } 
+
+    nav .right a span{
+        display: none;
+    }
+}
